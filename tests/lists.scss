@@ -1,0 +1,6 @@
+@import "setup";
+
+.contains {
+  color: if(-wtr-list-contains-not($wtr-absolute-length-units, "px"), green, red);
+  background: if(-wtr-list-contains($wtr-absolute-length-units, "px"), green, red);
+}

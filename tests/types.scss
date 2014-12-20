@@ -1,0 +1,30 @@
+@import "setup";
+
+.positive-int {
+  color: if(-wtr-is-number(6), green, red);
+}
+
+.negative-float {
+  color: if(-wtr-is-number(-456.8), green, red);
+}
+
+.zero-leading-plus {
+  color: if(-wtr-is-number(+0.0), green, red);
+}
+
+.trimmed-zero {
+  color: if(-wtr-is-number(.60), green, red);
+}
+
+.scientific-notation {
+  color: if(-wtr-is-number(10e3), green, red);
+}
+
+.multiple-dots {
+  color: if(-wtr-is-number(12.1.1), green, red);
+}
+
+.percentage {
+  color: if(-wtr-is-percentage(12%), green, red);
+  background: if(-wtr-is-percentage(12), green, red);
+}

@@ -1,0 +1,28 @@
+/// A list of relative font-based length units
+$wtr-font-length-units:
+  "em",
+  "ex",
+  "ch",
+  "rem" !global;
+
+/// A list of relative viewport-based length units
+$wtr-viewport-length-units:
+  "vw",
+  "vh",
+  "vmin",
+  "vmax" !global;
+
+/// A list of relative length units
+$wtr-relative-length-units: join($wtr-font-length-units, $wtr-viewport-length-units) !global;
+
+/// A list of absolute length units
+$wtr-absolute-length-units:
+  "cm",
+  "mm",
+  "in",
+  "px",
+  "pt",
+  "pc" !global;
+
+/// A list of length units
+$wtr-length-units: join($wtr-relative-length-units, $wtr-absolute-length-units) !global;

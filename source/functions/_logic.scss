@@ -1,0 +1,7 @@
+/// A basic wrapper around `not`
+/// @param {Bool} $value
+///   A boolean value
+
+@function -wtr-is-not($value) {
+  @return if($value, false, true);
+}

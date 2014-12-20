@@ -1,0 +1,13 @@
+/// Returns whether a list contains a value
+/// @param {List} $list
+///   Target list
+/// @param {*} $value
+///   Value to look for
+
+@function -wtr-list-contains($list, $value) {
+  @return -wtr-is-not(-wtr-list-contains-not($list, $value));
+}
+
+@function -wtr-list-contains-not($list, $value) {
+  @return -wtr-is-not(index($list, $value));
+}

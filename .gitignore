@@ -1,0 +1,11 @@
+.DS_store
+.sass-cache
+*gem
+*swp
+Gemfile.lock
+public
+tmp
+vendor/gems
+pkg/
+gh-pages
+homebrew-formulae

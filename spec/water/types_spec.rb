@@ -45,13 +45,27 @@ end
 describe "-wtr-is-percentage()" do
   context "when passed 12%" do
     it "returns true" do
-      expect(".percentage").to have_rule("color: green")
+      expect(".is-percentage").to have_rule("color: green")
     end
   end
 
   context "when passed 12" do
     it "returns false" do
-      expect(".percentage").to have_rule("background: red")
+      expect(".is-percentage").to have_rule("background: red")
+    end
+  end
+end
+
+describe "-wtr-is-length()" do
+  context "when passed 12px" do
+    it "returns true" do
+      expect(".is-length").to have_rule("color: green")
+    end
+  end
+
+  context "when passed 12" do
+    it "returns false" do
+      expect(".is-length").to have_rule("background: red")
     end
   end
 end

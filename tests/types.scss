@@ -24,7 +24,12 @@
   color: if(-wtr-is-number(12.1.1), green, red);
 }
 
-.percentage {
+.is-percentage {
   color: if(-wtr-is-percentage(12%), green, red);
   background: if(-wtr-is-percentage(12), green, red);
+}
+
+.is-length {
+  color: if(-wtr-is-length(12px), green, red);
+  background: if(-wtr-is-length(12), green, red);
 }

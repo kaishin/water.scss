@@ -16,6 +16,6 @@
 /// @returns {Bool} `true` if the value is a length
 
 @function -wtr-is-length($value) {
-  @return -wtr-is-number($value)
+  @return -wtr-list-contains($wtr-length-units, unit($value));
 }
 

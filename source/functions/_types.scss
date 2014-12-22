@@ -9,13 +9,35 @@
 /// @returns {Bool} `true` if the value is a percentage
 
 @function -wtr-is-percentage($value) {
-  @return unit($value) == "%";
+  @return -wtr-is-number($value) and unit($value) == "%";
 }
 
 /// Checks if a value is a length
 /// @returns {Bool} `true` if the value is a length
 
 @function -wtr-is-length($value) {
-  @return -wtr-list-contains($wtr-length-units, unit($value));
+  @return -wtr-is-number($value) and -wtr-list-contains($wtr-length-units, unit($value));
 }
 
+/// Checks if a value is a valid width/height value
+/// @returns {Bool} `true` if the value is a valid width/height value
+
+@function -wtr-is-size($value) {
+  $list-length: length($value);
+
+  @if $list-length == 1 {
+    @return -wtr-is-length($value)
+      or -wtr-is-percentage($value)
+      or -wtr-list-contains($wtr-width-values, $value);
+  } @else if $list-length == 2 {
+    $first-value: nth($value, 1);
+    $second-value: nth($value, 2);
+    $valid-first-value:
+      -wtr-is-length($first-value)
+      or -wtr-is-percentage($first-value);
+    $valid-second-value: -wtr-list-contains($wtr-box-sizing-width-values, $second-value);
+    @return $valid-first-value and $valid-second-value;
+  } @else {
+    @return false;
+  }
+}

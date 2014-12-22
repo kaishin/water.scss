@@ -33,3 +33,8 @@
   color: if(-wtr-is-length(12px), green, red);
   background: if(-wtr-is-length(12), green, red);
 }
+
+.is-size {
+  color: if(-wtr-is-size(12px border-box), green, red);
+  background: if(-wtr-is-size(invalid), green, red);
+}

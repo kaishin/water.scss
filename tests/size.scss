@@ -7,3 +7,15 @@
 .explicit-height {
   @include -wtr-size(200px, 800px);
 }
+
+.invalid-height {
+  @include -wtr-size(200px, invalid);
+}
+
+.composite-width {
+  @include -wtr-size(200px border-box);
+}
+
+.invalid-width {
+  @include -wtr-size(invalid);
+}

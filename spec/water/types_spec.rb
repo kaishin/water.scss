@@ -56,6 +56,20 @@ describe "-wtr-is-percentage()" do
   end
 end
 
+describe "-wtr-is-size()" do
+  context "when passed 12px border-box" do
+    it "returns true" do
+      expect(".is-size").to have_rule("color: green")
+    end
+  end
+
+  context "when passed 'invalid'" do
+    it "returns false" do
+      expect(".is-size").to have_rule("background: red")
+    end
+  end
+end
+
 describe "-wtr-is-length()" do
   context "when passed 12px" do
     it "returns true" do

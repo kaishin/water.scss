@@ -1,0 +1,5 @@
+@import "setup";
+
+.single-parameter {
+  @include -wtr-size(200px);
+}

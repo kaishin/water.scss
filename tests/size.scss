@@ -1,5 +1,9 @@
 @import "setup";
 
-.single-parameter {
+.implicit-height {
   @include -wtr-size(200px);
+}
+
+.explicit-height {
+  @include -wtr-size(200px, 800px);
 }

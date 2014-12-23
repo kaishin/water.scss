@@ -1,0 +1,6 @@
+/// @requires wtr-size
+/// @alias wtr-size
+
+@mixin size($width, $height: null) {
+  @include wtr-size($width, $height);
+}

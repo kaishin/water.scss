@@ -1,6 +1,30 @@
 @import "functions/logic";
-@import "functions/types";
 @import "functions/lists";
+@import "functions/types";
 
 @import "mixins/size";
 @import "constants";
+
+.implicit-height {
+  @include wtr-size(200px);
+}
+
+.explicit-height {
+  @include wtr-size(200px, 800px);
+}
+
+.invalid-height {
+  @include wtr-size(200px, invalid);
+}
+
+.composite-width {
+  @include wtr-size(200px border-box);
+}
+
+.invalid-width {
+  @include wtr-size(invalid);
+}
+
+.calc-width {
+  @include wtr-size(calc(100% - 20px));
+}

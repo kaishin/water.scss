@@ -1,5 +1,5 @@
 @import "setup";
 
 .is-not {
-  color: if(-wtr-is-not(true), green, red);
+  color: if(wtr-is-not(true), green, red);
 }

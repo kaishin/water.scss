@@ -1,41 +1,60 @@
 /// Checks if a value is of type `number`
 /// @returns {Bool} `true` if the value is a number
 
-@function -wtr-is-number($value) {
+@function wtr-is-number($value) {
   @return type-of($value) == "number";
+}
+
+/// Checks if a value is of type `string`
+/// @returns {Bool} `true` if the value is a string
+
+@function wtr-is-string($value) {
+  @return type-of($value) == "string";
+}
+
+/// Checks if a value is a valid calc() value
+/// @returns {Bool} `true` if the value is a calc() value
+
+@function wtr-is-calc($value) {
+  @if wtr-is-not(wtr-is-string($value)) { @return false; }
+  $starts-with-calc: str-slice($value, 1, 5) == "calc(" ;
+  $ends-with-parenthesis: str-slice($value, str-length($value)) == ")";
+  @return $starts-with-calc and $ends-with-parenthesis;
 }
 
 /// Checks if a value is a percentage
 /// @returns {Bool} `true` if the value is a percentage
 
-@function -wtr-is-percentage($value) {
-  @return -wtr-is-number($value) and unit($value) == "%";
+@function wtr-is-percentage($value) {
+  @return wtr-is-number($value) and unit($value) == "%";
 }
 
 /// Checks if a value is a length
 /// @returns {Bool} `true` if the value is a length
 
-@function -wtr-is-length($value) {
-  @return -wtr-is-number($value) and -wtr-list-contains($wtr-length-units, unit($value));
+@function wtr-is-length($value) {
+  $valid-number: wtr-is-number($value) and wtr-list-contains($wtr-length-units, unit($value));
+  $valid-calc: wtr-is-calc($value);
+  @return $valid-number or $valid-calc;
 }
 
 /// Checks if a value is a valid width/height value
 /// @returns {Bool} `true` if the value is a valid width/height value
 
-@function -wtr-is-size($value) {
+@function wtr-is-size($value) {
   $list-length: length($value);
 
   @if $list-length == 1 {
-    @return -wtr-is-length($value)
-      or -wtr-is-percentage($value)
-      or -wtr-list-contains($wtr-width-values, $value);
+    @return wtr-is-length($value)
+      or wtr-is-percentage($value)
+      or wtr-list-contains($wtr-width-values, $value);
   } @else if $list-length == 2 {
     $first-value: nth($value, 1);
     $second-value: nth($value, 2);
     $valid-first-value:
-      -wtr-is-length($first-value)
-      or -wtr-is-percentage($first-value);
-    $valid-second-value: -wtr-list-contains($wtr-box-sizing-width-values, $second-value);
+      wtr-is-length($first-value)
+      or wtr-is-percentage($first-value);
+    $valid-second-value: wtr-list-contains($wtr-box-sizing-width-values, $second-value);
     @return $valid-first-value and $valid-second-value;
   } @else {
     @return false;

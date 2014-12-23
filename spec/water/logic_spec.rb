@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "-wtr-is-not()" do
+describe "wtr-is-not()" do
   before(:all) do
     ParserSupport.parse_file("logic")
   end

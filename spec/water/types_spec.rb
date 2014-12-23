@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "-wtr-is-number()" do
+describe "wtr-is-number()" do
   before(:all) do
     ParserSupport.parse_file("types")
   end
@@ -42,7 +42,7 @@ describe "-wtr-is-number()" do
   end
 end
 
-describe "-wtr-is-percentage()" do
+describe "wtr-is-percentage()" do
   context "when passed 12%" do
     it "returns true" do
       expect(".is-percentage").to have_rule("color: green")
@@ -56,7 +56,7 @@ describe "-wtr-is-percentage()" do
   end
 end
 
-describe "-wtr-is-size()" do
+describe "wtr-is-size()" do
   context "when passed 12px border-box" do
     it "returns true" do
       expect(".is-size").to have_rule("color: green")
@@ -70,7 +70,7 @@ describe "-wtr-is-size()" do
   end
 end
 
-describe "-wtr-is-length()" do
+describe "wtr-is-length()" do
   context "when passed 12px" do
     it "returns true" do
       expect(".is-length").to have_rule("color: green")
@@ -80,6 +80,28 @@ describe "-wtr-is-length()" do
   context "when passed 12" do
     it "returns false" do
       expect(".is-length").to have_rule("background: red")
+    end
+  end
+end
+
+describe "wtr-is-string()" do
+  context "when passed 'hello'" do
+    it "returns true" do
+      expect(".is-string").to have_rule("color: green")
+    end
+  end
+
+  context "when passed hello" do
+    it "returns true" do
+      expect(".is-string").to have_rule("background: green")
+    end
+  end
+end
+
+describe "wtr-is-calc()" do
+  context "when passed 'calc(100% - 20px)'" do
+    it "returns true" do
+      expect(".is-calc").to have_rule("color: green")
     end
   end
 end

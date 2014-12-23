@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe "-wtr-size()" do
+describe "wtr-size()" do
   before(:all) do
     ParserSupport.parse_file("size")
   end
@@ -52,6 +52,16 @@ describe "-wtr-size()" do
 
     it "ignores height" do
       expect(".invalid-width").to_not have_rule("height: invalid")
+    end
+  end
+
+  context "when passed 'calc(100% - 20px)'" do
+    it "sets width to calc(100% - 20px)" do
+      expect(".calc-width").to have_rule("width: calc(100% - 20px)")
+    end
+
+    it "sets height to calc(100% - 20px)" do
+      expect(".calc-width").to have_rule("height: calc(100% - 20px)")
     end
   end
 end

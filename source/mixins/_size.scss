@@ -8,11 +8,11 @@
 ///
 /// @example scss - Usage
 ///   .element {
-///     @include -wtr-size(200px);
+///     @include wtr-size(200px);
 ///   }
 ///
 ///   .other-element {
-///     @include -wtr-size(200px, auto)
+///     @include wtr-size(200px, auto)
 ///   }
 ///
 /// @example css - CSS Output
@@ -26,9 +26,9 @@
 ///     height: auto;
 ///   }
 
-@mixin -wtr-size($width, $height: null) {
-  $width: if(-wtr-is-size($width), $width, null);
-  $height: if(-wtr-is-size($height), $height, null);
+@mixin wtr-size($width, $height: null) {
+  $width: if(wtr-is-size($width), $width, null);
+  $height: if(wtr-is-size($height), $height, null);
   width: $width;
   height: if($height, $height, $width);
 }

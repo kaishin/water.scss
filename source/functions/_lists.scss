@@ -4,8 +4,8 @@
 /// @param {*} $value
 ///   Value to look for
 
-@function -wtr-list-contains($list, $value) {
-  @return -wtr-is-not(-wtr-list-contains-not($list, $value));
+@function wtr-list-contains($list, $value) {
+  @return wtr-is-not(wtr-list-contains-not($list, $value));
 }
 
 /// Returns whether a list does not contain a value
@@ -14,6 +14,6 @@
 /// @param {*} $value
 ///   Value to look for
 
-@function -wtr-list-contains-not($list, $value) {
-  @return -wtr-is-not(index($list, $value));
+@function wtr-list-contains-not($list, $value) {
+  @return wtr-is-not(index($list, $value));
 }

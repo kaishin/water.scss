@@ -22,6 +22,13 @@
   @return $starts-with-calc and $ends-with-parenthesis;
 }
 
+/// Checks if a value is a valid global CSS value
+/// @returns {Bool} `true` if the value is a valid global CSS value
+
+@function wtr-is-global-value($value) {
+  @return wtr-list-contains($wtr-global-values, $value);
+}
+
 /// Checks if a value is a percentage
 /// @returns {Bool} `true` if the value is a percentage
 
@@ -47,7 +54,8 @@
   @if $list-length == 1 {
     @return wtr-is-length($value)
       or wtr-is-percentage($value)
-      or wtr-list-contains($wtr-width-values, $value);
+      or wtr-list-contains($wtr-width-values, $value)
+      or wtr-is-global-value($value);
   } @else if $list-length == 2 {
     $first-value: nth($value, 1);
     $second-value: nth($value, 2);

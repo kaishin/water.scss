@@ -28,3 +28,7 @@
 .calc-width {
   @include wtr-size(calc(100% - 20px));
 }
+
+.inherited-width {
+  @include wtr-size(inherit);
+}

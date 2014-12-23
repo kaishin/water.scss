@@ -64,4 +64,14 @@ describe "wtr-size()" do
       expect(".calc-width").to have_rule("height: calc(100% - 20px)")
     end
   end
+
+  context "when passed 'inherit'" do
+    it "sets width to inherit" do
+      expect(".inherited-width").to have_rule("width: inherit")
+    end
+
+    it "sets height to 'inherit'" do
+      expect(".inherited-width").to have_rule("height: inherit")
+    end
+  end
 end

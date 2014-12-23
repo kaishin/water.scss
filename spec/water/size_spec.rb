@@ -66,7 +66,7 @@ describe "wtr-size()" do
   end
 
   context "when passed 'inherit'" do
-    it "sets width to inherit" do
+    it "sets width to 'inherit'" do
       expect(".inherited-width").to have_rule("width: inherit")
     end
 

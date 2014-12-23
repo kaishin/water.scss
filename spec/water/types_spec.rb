@@ -82,6 +82,12 @@ describe "wtr-is-length()" do
       expect(".is-length").to have_rule("background: red")
     end
   end
+
+  context "when passed 0" do
+    it "returns true" do
+      expect(".is-length").to have_rule("display: green")
+    end
+  end
 end
 
 describe "wtr-is-string()" do

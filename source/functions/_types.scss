@@ -42,7 +42,8 @@
 @function wtr-is-length($value) {
   $valid-number: wtr-is-number($value) and wtr-list-contains($wtr-length-units, unit($value));
   $valid-calc: wtr-is-calc($value);
-  @return $valid-number or $valid-calc;
+  $unitless-zero: $value == 0;
+  @return $valid-number or $valid-calc or $unitless-zero;
 }
 
 /// Checks if a value is a valid width/height value

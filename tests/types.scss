@@ -41,6 +41,7 @@
 .is-length {
   color: if(wtr-is-length(12px), green, red);
   background: if(wtr-is-length(12), green, red);
+  display: if(wtr-is-length(0), green, red);
 }
 
 .is-size {

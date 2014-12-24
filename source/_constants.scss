@@ -1,5 +1,5 @@
 /// A list of global CSS values
-$wtr-global-values: "initial", "inherit", "unset";
+$wtr-global-values: "initial", "inherit", "unset" !global;
 
 /// A list of relative font-based length units
 $wtr-font-length-units:
@@ -31,10 +31,10 @@ $wtr-absolute-length-units:
 $wtr-length-units: join($wtr-relative-length-units, $wtr-absolute-length-units) !global;
 
 /// A list of width compatible box-sizing values
-$wtr-box-sizing-width-values: "border-box", "content-box";
+$wtr-box-sizing-width-values: "border-box", "content-box" !global;
 
 /// A list of box-sizing values
-$wtr-box-sizing-values: join($wtr-box-sizing-width-values, "padding-box");
+$wtr-box-sizing-values: join($wtr-box-sizing-width-values, "padding-box") !global;
 
 /// A list of width/height values
-$wtr-width-values: "available", "min-content", "max-content", "fit-content", "auto";
+$wtr-width-values: "available", "min-content", "max-content", "fit-content", "auto" !global;

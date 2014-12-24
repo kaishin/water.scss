@@ -1,4 +1,4 @@
-@import "setup";
+@import "../setup";
 
 .positive-int {
   color: if(wtr-is-number(6), green, red);
@@ -26,7 +26,6 @@
 
 .is-string {
   color: if(wtr-is-string("hello"), green, red);
-  background: if(wtr-is-string(hello), green, red);
 }
 
 .is-calc {

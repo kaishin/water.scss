@@ -1,4 +1,4 @@
-@import "setup";
+@import "../setup";
 
 .is-not {
   color: if(wtr-is-not(true), green, red);

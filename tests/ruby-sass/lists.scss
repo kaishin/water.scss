@@ -1,4 +1,4 @@
-@import "setup";
+@import "../setup";
 
 .contains {
   color: if(wtr-list-contains-not($wtr-absolute-length-units, "px"), green, red);

@@ -1,113 +1,17 @@
 require "spec_helper"
 
-describe "wtr-is-number()" do
+describe "ruby-sass type functions" do
   before(:all) do
     ParserSupport.parse_file("types")
   end
 
-  context "when passed 6" do
-    it "returns true" do
-      expect(".positive-int").to have_rule("color: green")
-    end
-  end
-
-  context "when passed -456.8" do
-    it "returns true" do
-      expect(".negative-float").to have_rule("color: green")
-    end
-  end
-
-  context "when passed +0.0" do
-    it "returns true" do
-      expect(".zero-leading-plus").to have_rule("color: green")
-    end
-  end
-
-  context "when passed .60" do
-    it "returns true" do
-      expect(".trimmed-zero").to have_rule("color: green")
-    end
-  end
-
-  context "when passed 10e3" do
-    it "returns true" do
-      expect(".scientific-notation").to have_rule("color: green")
-    end
-  end
-
-  context "when passed 12.1.1" do
-    it "returns fasle" do
-      expect(".multiple-dots").to have_rule("color: red")
-    end
-  end
+  it_behaves_like "type functions"
 end
 
-describe "wtr-is-percentage()" do
-  context "when passed 12%" do
-    it "returns true" do
-      expect(".is-percentage").to have_rule("color: green")
-    end
+describe "libsass type functions" do
+  before(:all) do
+    ParserSupport.parse_file("libsass-types")
   end
 
-  context "when passed 12" do
-    it "returns false" do
-      expect(".is-percentage").to have_rule("background: red")
-    end
-  end
-end
-
-describe "wtr-is-size()" do
-  context "when passed 12px border-box" do
-    it "returns true" do
-      expect(".is-size").to have_rule("color: green")
-    end
-  end
-
-  context "when passed 'invalid'" do
-    it "returns false" do
-      expect(".is-size").to have_rule("background: red")
-    end
-  end
-end
-
-describe "wtr-is-length()" do
-  context "when passed 12px" do
-    it "returns true" do
-      expect(".is-length").to have_rule("color: green")
-    end
-  end
-
-  context "when passed 12" do
-    it "returns false" do
-      expect(".is-length").to have_rule("background: red")
-    end
-  end
-
-  context "when passed 0" do
-    it "returns true" do
-      expect(".is-length").to have_rule("display: green")
-    end
-  end
-end
-
-describe "wtr-is-string()" do
-  context "when passed 'hello'" do
-    it "returns true" do
-      expect(".is-string").to have_rule("color: green")
-    end
-  end
-
-  context "when passed hello" do
-    it "returns true" do
-      expect(".is-string").to have_rule("background: green")
-    end
-  end
-end
-
-describe "wtr-is-calc()" do
-  context "when passed 'calc(100% - 20px)'" do
-    it "returns true" do
-      expect(".is-calc").to have_rule("color: green")
-    end
-  end
+  it_behaves_like "type functions"
 end

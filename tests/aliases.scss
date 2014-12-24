@@ -1,6 +1,0 @@
-@import "setup";
-@import "../source/aliases";
-
-.aliased {
-  @include size(200px);
-}

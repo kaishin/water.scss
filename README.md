@@ -8,7 +8,7 @@ are getting into.
 
 - 100% compatible with latest versions of Ruby Sass & Libsass.
 - 100% documentated using SassDoc.
-- 100% test coverage.
-- 100% name-scoped.
+- 100% test coverage using both Ruby Sass & Libsass.
+- 100% "name-scoped", i.e. every variable, function, and mixin is prefixed with `wtr-`.
+- 100% **not** ready for production.
 - 100% H2O.
-- 0% ready for production.

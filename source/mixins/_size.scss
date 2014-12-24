@@ -3,7 +3,7 @@
 /// @param {Size} $width
 ///   Width value. It will also be used as a height value if the latter is not specified.
 ///
-/// @param {Size} $height
+/// @param {Size} $height ($width)
 ///   Optional height value.
 ///
 /// @example scss - Usage
@@ -26,9 +26,7 @@
 ///     height: auto;
 ///   }
 
-@mixin wtr-size($width, $height: null) {
-  $width: if(wtr-is-size($width), $width, null);
-  $height: if(wtr-is-size($height), $height, null);
-  width: $width;
-  height: if($height, $height, $width);
+@mixin wtr-size($width, $height: $width) {
+  width: if(wtr-is-size($width), $width, null);
+  height: if(wtr-is-size($height), $height, null);
 }

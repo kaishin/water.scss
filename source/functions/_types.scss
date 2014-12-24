@@ -16,10 +16,9 @@
 /// @returns {Bool} `true` if the value is a calc() value
 
 @function wtr-is-calc($value) {
-  @if wtr-is-not(wtr-is-string($value)) { @return false; }
-  $starts-with-calc: str-slice($value, 1, 5) == "calc(" ;
-  $ends-with-parenthesis: str-slice($value, str-length($value)) == ")";
-  @return $starts-with-calc and $ends-with-parenthesis;
+  @return wtr-is-string($value) 
+    and str-slice($value, 1, 5) == "calc(" 
+    and str-slice($value, str-length($value)) == ")";
 }
 
 /// Checks if a value is a valid global CSS value

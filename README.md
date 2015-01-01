@@ -1,5 +1,5 @@
 <img src="https://db.tt/M9Zrr59Q" width="150" />
-#### Just add *water* [![Circle CI](https://circleci.com/gh/kaishin/water.scss/tree/master.svg?style=svg)](https://circleci.com/gh/kaishin/water.scss/tree/master)
+#### Just add *water* [![Circle CI](https://circleci.com/gh/kaishin/water.scss/tree/master.svg?style=svg)](https://circleci.com/gh/kaishin/water.scss/tree/master) ![Bower](https://img.shields.io/bower/v/water.scss.svg?style=flat)
 
 A highly experimental Sass micro library. Don't use unless you know what you
 are getting into.

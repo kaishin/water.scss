@@ -1,0 +1,11 @@
+@import "../setup";
+
+.increment {
+  width: wtr-increment(199px);
+  height: wtr-increment(200px, 5);
+}
+
+.decrement {
+  width: wtr-decrement(200px);
+  height: wtr-decrement(200px, 5);
+}

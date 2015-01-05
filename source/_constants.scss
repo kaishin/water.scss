@@ -39,10 +39,11 @@ $wtr-box-sizing-values: join($wtr-box-sizing-width-values, "padding-box") !globa
 /// A list of width/height values
 $wtr-width-values: "available", "min-content", "max-content", "fit-content", "auto" !global;
 
-/// A list of `media()` qualifiers
-$wtr-media-qualifiers:
+/// A list of `media()` constraints
+$wtr-media-constraints:
   "until",
+  "until-excluding",
   "from",
-  "split-until",
-  "split-from",
+  "from-excluding",
+  "equal",
   "between" !global;

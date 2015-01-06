@@ -1,0 +1,6 @@
+@import "../setup";
+
+.assert {
+  @include wtr-assert(false, "This should be true.");
+  color: red;
+}

@@ -1,6 +1,8 @@
+@import "constants";
+
 @import "functions/lists";
 @import "functions/types";
 @import "functions/number";
 
 @import "mixins/size";
-@import "constants";
+@import "mixins/assert";

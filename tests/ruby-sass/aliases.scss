@@ -2,5 +2,6 @@
 @import "../../source/aliases";
 
 .aliased {
+  @include assert(true, "It should be true.");
   @include size(200px);
 }

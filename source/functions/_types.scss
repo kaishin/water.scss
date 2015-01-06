@@ -5,6 +5,13 @@
   @return type-of($value) == "number";
 }
 
+/// Checks if a value is of type `list`
+/// @returns {Bool} `true` if the value is a list
+
+@function wtr-is-list($value) {
+  @return type-of($value) == "list";
+}
+
 /// Checks if a value is of type `string`
 /// @returns {Bool} `true` if the value is a string
 

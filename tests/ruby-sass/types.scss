@@ -47,3 +47,9 @@
   color: if(wtr-is-size(12px border-box), green, red);
   background: if(wtr-is-size(invalid), green, red);
 }
+
+.is-list {
+  $list: 1, 2;
+  color: if(wtr-is-list($list), green, red);
+  background: if(wtr-is-list(1), green, red);
+}

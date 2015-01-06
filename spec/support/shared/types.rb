@@ -88,4 +88,16 @@ RSpec.shared_examples "type functions" do
       expect(".is-calc").to have_rule("color: green")
     end
   end
+
+  context "wtr-is-list((1, 2))" do
+    it "returns true" do
+      expect(".is-list").to have_rule("color: green")
+    end
+  end
+
+  context "wtr-is-list(1)" do
+    it "returns false" do
+      expect(".is-list").to have_rule("background: red")
+    end
+  end
 end

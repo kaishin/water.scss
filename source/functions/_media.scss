@@ -1,0 +1,34 @@
+/// Constructs a media query expression.
+///
+/// @param {String} $feature
+///   The media query feature to use. A list of possible values can be found [here](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries#Media_features)
+///
+/// @param {String} $prefix (null)
+///   An optional prefix to use.
+///
+/// @returns {String} The media query expression.
+
+@function wtr-media-expression($feature, $prefix: null) {
+  @return #{$prefix}-#{$feature};
+}
+
+/// Returns a media expression prefix from a media constraint
+///
+/// @param {String} $constraint
+///   The constraint to transform to a media prefix.
+///
+/// @returns {String} A media expression prefix
+
+@function wtr-media-prefix($constraint) {
+  @if wtr-is-not(wtr-is-media-constraint($constraint)) {
+    @return null;
+  } @else if $constraint == "from" or $constraint == "from-excluding" {
+    @return "min-";
+  } @else if $constraint == "until" or $constraint == "until-excluding" {
+    @return "max-";
+  } @else if $constraint == "equal" {
+    @return null;
+  } @else if $constraint == "between" {
+    @return "min-", "max-";
+  }
+}

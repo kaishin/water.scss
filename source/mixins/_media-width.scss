@@ -12,7 +12,7 @@
 /// @param {Number} $first-value
 ///   The value to be used in single expression queries.
 ///
-/// @param {Number} $second-value
+/// @param {Number} $second-value (null)
 ///   The value to be used in double expression queries such as `between`.
 
 @mixin wtr-media-width($constraint, $first-value, $second-value: null) {

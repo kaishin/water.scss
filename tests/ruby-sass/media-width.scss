@@ -1,18 +1,37 @@
 @import "../setup";
 
-@mixin wtr-media-width($constraint, $primary-value, $secondary-value: null) {
-  $secondary-value-required: $constraint == "between";
-  $between-error: $secondary-value-required and not($secondary-value);
-  @include wtr-assert(not($between-error), "Constraints of type `between` require an upper value");
-  @include wtr-assert(wtr-is-length($primary-value), "Value should be of type `length`");
-  $feature: "width";
-  $expression: wtr-media-expression($feature, wtr-media-prefix($constraint));
+.media-width-from {
+  @include wtr-media-width(from, 250px) {
+    color: red
+  }
 }
 
-div {
-  @include wtr-media-width(until, 250px) { color: blue }
-  @include wtr-media-width(from, 250px) { color: red }
-  @include wtr-media-width(until-excluding, 250xp) { color: green }
-  @include wtr-media-width(from-excluding, 250px) { color: pink }
-  @include wtr-media-width(between, 250px, 450px) { color: purple }
+.media-width-until {
+  @include wtr-media-width(until, 250px) {
+    color: blue
+  }
+}
+
+.media-width-equal {
+  @include wtr-media-width(equal, 250px) {
+    color: lime
+  }
+}
+
+.media-width-between {
+  @include wtr-media-width(between, 250px, 450px) {
+    color: purple
+  }
+}
+
+.media-width-from-excluding {
+  @include wtr-media-width(from-excluding, 250px) {
+    color: pink
+  }
+}
+
+.media-width-until-excluding {
+  @include wtr-media-width(until-excluding, 250px) {
+    color: green
+  }
 }

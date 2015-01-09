@@ -1,4 +1,5 @@
 /// Checks if a value is of type `number`
+/// @access private
 /// @param {*} $value - The value to inspect
 /// @returns {Bool} `true` if the value is a number
 @function wtr-is-number($value) {
@@ -6,6 +7,7 @@
 }
 
 /// Checks if a value is of type `list`
+/// @access private
 /// @param {*} $value - The value to inspect
 /// @returns {Bool} `true` if the value is a list
 @function wtr-is-list($value) {
@@ -13,6 +15,7 @@
 }
 
 /// Checks if a value is of type `string`
+/// @access private
 /// @param {*} $value - The value to inspect
 /// @returns {Bool} `true` if the value is a string
 @function wtr-is-string($value) {
@@ -20,6 +23,7 @@
 }
 
 /// Checks if a value is a valid calc() value
+/// @access private
 /// @param {*} $value - The value to inspect
 /// @returns {Bool} `true` if the value is a calc() value
 @function wtr-is-calc($value) {
@@ -29,6 +33,7 @@
 }
 
 /// Checks if a value is a valid global CSS value
+/// @access private
 /// @param {*} $value - The value to inspect
 /// @returns {Bool} `true` if the value is a valid global CSS value
 @function wtr-is-global-value($value) {
@@ -36,6 +41,7 @@
 }
 
 /// Checks if a value is a percentage
+/// @access private
 /// @param {*} $value - The value to inspect
 /// @returns {Bool} `true` if the value is a percentage
 @function wtr-is-percentage($value) {
@@ -53,6 +59,7 @@
 }
 
 /// Checks if a value is a valid width/height value
+/// @access private
 /// @param {*} $value - The value to inspect
 /// @returns {Bool} `true` if the value is a valid width/height value
 @function wtr-is-size($value) {

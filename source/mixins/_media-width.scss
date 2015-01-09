@@ -1,4 +1,5 @@
 /// Wraps the content in a width-based media query
+/// @access public
 /// @param {String} $constraint
 ///   The constraint to use for generating the media query.
 ///     - `until` resolves to `max-width`

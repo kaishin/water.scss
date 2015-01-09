@@ -1,4 +1,5 @@
 /// Constructs a media query expression.
+/// @access private
 /// @param {String} $feature
 ///   - The media query feature to use
 ///   - A list of possible values can be found [here](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries#Media_features)
@@ -9,6 +10,7 @@
 }
 
 /// Returns a media expression prefix from a media constraint
+/// @access private
 /// @param {String} $constraint - The constraint to transform to a media prefix
 /// @return {String} A media expression prefix
 @function wtr-media-prefix($constraint) {

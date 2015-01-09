@@ -23,8 +23,8 @@
 /// @returns {Bool} `true` if the value is a calc() value
 
 @function wtr-is-calc($value) {
-  @return wtr-is-string($value) 
-    and str-slice($value, 1, 5) == "calc(" 
+  @return wtr-is-string($value)
+    and str-slice($value, 1, 5) == "calc("
     and str-slice($value, str-length($value)) == ")";
 }
 

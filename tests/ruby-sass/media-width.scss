@@ -1,0 +1,37 @@
+@import "../setup";
+
+.media-width-from {
+  @include wtr-media-width(from, 250px) {
+    color: $green;
+  }
+}
+
+.media-width-until {
+  @include wtr-media-width(until, 250px) {
+    color: $green;
+  }
+}
+
+.media-width-equal {
+  @include wtr-media-width(equal, 250px) {
+    color: $green;
+  }
+}
+
+.media-width-between {
+  @include wtr-media-width(between, 250px, 450px) {
+    color: $green;
+  }
+}
+
+.media-width-from-excluding {
+  @include wtr-media-width(from-excluding, 250px) {
+    color: $green;
+  }
+}
+
+.media-width-until-excluding {
+  @include wtr-media-width(until-excluding, 250px) {
+    color: $green;
+  }
+}

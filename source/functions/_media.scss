@@ -20,7 +20,10 @@
 /// @returns {String} A media expression prefix
 
 @function wtr-media-prefix($constraint) {
-  @include wtr-assert(wtr-is-media-constraint($constraint), "Argument should be a constraint");
+  @if not(wtr-is-media-constraint($constraint)) {
+    @error "Argument should be a constraint";
+  }
+
   $prefix: null;
 
   @if $constraint == "from" or $constraint == "from-excluding" {

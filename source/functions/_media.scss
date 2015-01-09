@@ -6,7 +6,7 @@
 /// @param {String} $prefix (null)
 ///   An optional prefix to use.
 ///
-/// @returns {String} The media query expression.
+/// @return {String} The media query expression.
 
 @function wtr-media-expression($feature, $prefix: null) {
   @return #{$prefix}#{$feature};
@@ -17,7 +17,7 @@
 /// @param {String} $constraint
 ///   The constraint to transform to a media prefix.
 ///
-/// @returns {String} A media expression prefix
+/// @return {String} A media expression prefix
 
 @function wtr-media-prefix($constraint) {
   @if not(wtr-is-media-constraint($constraint)) {

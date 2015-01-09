@@ -1,43 +1,62 @@
 /// A list of global CSS values
-$wtr-global-values: "initial", "inherit", "unset" !global;
+/// @type List
+$wtr-global-values:
+  "initial",
+  "inherit",
+  "unset";
 
 /// A list of relative font-based length units
+/// @type List
 $wtr-font-length-units:
   "em",
   "ex",
   "ch",
-  "rem" !global;
+  "rem";
 
 /// A list of relative viewport-based length units
+/// @type List
 $wtr-viewport-length-units:
   "vw",
   "vh",
   "vmin",
-  "vmax" !global;
+  "vmax";
 
 /// A list of relative length units
-$wtr-relative-length-units: join($wtr-font-length-units, $wtr-viewport-length-units) !global;
+/// @type List
+$wtr-relative-length-units: join($wtr-font-length-units, $wtr-viewport-length-units);
 
 /// A list of absolute length units
+/// @type List
 $wtr-absolute-length-units:
   "cm",
   "mm",
   "in",
   "px",
   "pt",
-  "pc" !global;
+  "pc";
 
 /// A list of length units
-$wtr-length-units: join($wtr-relative-length-units, $wtr-absolute-length-units) !global;
+/// @type List
+$wtr-length-units: join($wtr-relative-length-units, $wtr-absolute-length-units);
 
 /// A list of width compatible box-sizing values
-$wtr-box-sizing-width-values: "border-box", "content-box" !global;
+/// @type List
+$wtr-box-sizing-width-values:
+  "border-box",
+  "content-box";
 
 /// A list of box-sizing values
-$wtr-box-sizing-values: join($wtr-box-sizing-width-values, "padding-box") !global;
+/// @type List
+$wtr-box-sizing-values: join($wtr-box-sizing-width-values, "padding-box");
 
 /// A list of width/height values
-$wtr-width-values: "available", "min-content", "max-content", "fit-content", "auto" !global;
+/// @type List
+$wtr-width-values:
+  "available",
+  "min-content",
+  "max-content",
+  "fit-content",
+  "auto";
 
 /// A list of `media()` constraints
 /// @type List

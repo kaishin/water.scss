@@ -20,13 +20,14 @@
 /// @returns {String} A media expression prefix
 
 @function wtr-media-prefix($constraint) {
-  @if not(wtr-is-media-constraint($constraint)) {
-    @return null;
-  } @else if $constraint == "from" or $constraint == "from-excluding" {
-    @return "min-";
+  @include wtr-assert(wtr-is-media-constraint($constraint), "Argument should be a constraint");
+  $prefix: null;
+
+  @if $constraint == "from" or $constraint == "from-excluding" {
+    $prefix: "min-";
   } @else if $constraint == "until" or $constraint == "until-excluding" {
-    @return "max-";
-  } @else if $constraint == "equal" or $constraint == "between" {
-    @return null;
+    $prefix: "max-";
   }
+
+  @return $prefix;
 }

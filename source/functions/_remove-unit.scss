@@ -1,0 +1,7 @@
+/// Remove the unit from a number value
+/// @access public
+/// @param {Number} $value - Value to remove the unit from
+/// @return {Number} Return aunitless number
+@function wtr-remove-unit($value) {
+  @return $value / ($value * 0 + 1);
+}

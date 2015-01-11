@@ -22,6 +22,10 @@
     "tests",
     "Gemfile",
     "Gemfile.lock",
-    "README.md"
+    "gulp.js",
+    "gulpfile.coffee",
+    "package.json",
+    "README.md",
+    "templates"
   ]
 }

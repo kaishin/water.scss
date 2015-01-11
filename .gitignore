@@ -9,3 +9,4 @@ vendor/gems
 pkg/
 gh-pages
 homebrew-formulae
+node_modules/

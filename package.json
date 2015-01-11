@@ -1,0 +1,13 @@
+{
+  "name": "water.scss",
+  "private": true,
+  "main": "gulp.js",
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "gulp": "^3.8.10",
+    "gulp-insert": "^0.4.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-template": "^2.0.0",
+    "minimist": "^1.1.0"
+  }
+}

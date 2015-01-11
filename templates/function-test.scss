@@ -1,0 +1,5 @@
+@import "../setup";
+
+.<%= name %> {
+  color: if(wtr-<%= name %>(), green, red);
+}

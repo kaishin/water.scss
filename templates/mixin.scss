@@ -1,0 +1,14 @@
+/// Description of wtr-<%= name %>
+/// @access public
+/// @param {Type} $name (default)
+///   - Param description
+/// @example scss - Usage
+///   .element {
+///     @include wtr-<%= name %>();
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///   }
+@mixin wtr-<%= name %>() {
+}

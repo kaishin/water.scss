@@ -27,3 +27,9 @@
 @mixin decrement($arguments...) {
   @include wtr-decrement($arguments...);
 }
+
+/// @requires wtr-remove-unit
+/// @alias wtr-remove-unit
+@function remove-unit($arguments...) {
+  @return wtr-remove-unit($arguments...);
+}

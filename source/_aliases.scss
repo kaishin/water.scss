@@ -12,8 +12,10 @@
 
 /// @requires wtr-media-width
 /// @alias wtr-media-width
-@mixin wtr-media-width($arguments...) {
-  @include wtr-media-width($arguments...);
+@mixin media-width($arguments...) {
+  @include wtr-media-width($arguments...) {
+    @content;
+  }
 }
 
 /// @requires wtr-increment
